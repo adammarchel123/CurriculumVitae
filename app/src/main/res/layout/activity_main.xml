@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="210px"
+            android:layout_height="210px"
+            android:src="@drawable/avatar"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="#52000000"
+            android:padding="6dp"/>
+
+    </FrameLayout>
+
+    <WebView
+        android:id="@+id/wv_cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fl_header"
+        android:layout_above="@id/btn_hubungi"/>
+    
+    <Button
+        android:id="@+id/btn_hubungi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hubungi"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#3f51b5"
+        android:clickable="true"
+        android:height="65dp"
+        android:textColor="#fff"/>
+
+</RelativeLayout>
